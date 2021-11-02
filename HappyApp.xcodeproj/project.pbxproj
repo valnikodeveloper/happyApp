@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C0E3A13E07DA5D73B42D7F1 /* Pods_HappyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C984921E617E944FFB57D4E6 /* Pods_HappyApp.framework */; };
+		187C355E272F203D007EECA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C355D272F203D007EECA1 /* SceneDelegate.swift */; };
+		187C3563272F38C0007EECA1 /* CollectionCellExtendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C3562272F38C0007EECA1 /* CollectionCellExtendedView.swift */; };
+		187C356927306165007EECA1 /* HappyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C356827306165007EECA1 /* HappyPageViewModel.swift */; };
+		187C356E27306838007EECA1 /* HappyPageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C356D27306838007EECA1 /* HappyPageModule.swift */; };
+		187C357027306F38007EECA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C356F27306F38007EECA1 /* AppDelegate.swift */; };
+		187C35722730896E007EECA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C35712730896E007EECA1 /* String+Extensions.swift */; };
+		2B78913C1FF4FDEB0025F3CB /* HappyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B78913B1FF4FDEB0025F3CB /* HappyPageViewController.swift */; };
+		2B7891411FF4FDEB0025F3CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7891401FF4FDEB0025F3CB /* Assets.xcassets */; };
+		2B7891441FF4FDEB0025F3CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7891421FF4FDEB0025F3CB /* LaunchScreen.storyboard */; };
+		2B78916A1FF500300025F3CB /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7891691FF500300025F3CB /* CategoryDataSource.swift */; };
+		8AD58EDC203801B2003ABFC6 /* CollectionItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD58ED7203801B2003ABFC6 /* CollectionItemViewCell.swift */; };
+		8AD58EDF203801B2003ABFC6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD58EDB203801B2003ABFC6 /* CustomTableViewCell.swift */; };
+		8AD58EE32038668F003ABFC6 /* CellHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD58EE22038668F003ABFC6 /* CellHeaderView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		187C355D272F203D007EECA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		187C3562272F38C0007EECA1 /* CollectionCellExtendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellExtendedView.swift; sourceTree = "<group>"; };
+		187C356827306165007EECA1 /* HappyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPageViewModel.swift; sourceTree = "<group>"; };
+		187C356D27306838007EECA1 /* HappyPageModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPageModule.swift; sourceTree = "<group>"; };
+		187C356F27306F38007EECA1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		187C35712730896E007EECA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		2B7891361FF4FDEB0025F3CB /* HappyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B78913B1FF4FDEB0025F3CB /* HappyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPageViewController.swift; sourceTree = "<group>"; };
+		2B7891401FF4FDEB0025F3CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B7891431FF4FDEB0025F3CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B7891451FF4FDEB0025F3CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B7891691FF500300025F3CB /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
+		8AD58ED7203801B2003ABFC6 /* CollectionItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItemViewCell.swift; sourceTree = "<group>"; };
+		8AD58EDB203801B2003ABFC6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8AD58EE22038668F003ABFC6 /* CellHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderView.swift; sourceTree = "<group>"; };
+		94C69024C8723B730F69C88A /* Pods-HappyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyApp.release.xcconfig"; path = "Target Support Files/Pods-HappyApp/Pods-HappyApp.release.xcconfig"; sourceTree = "<group>"; };
+		C984921E617E944FFB57D4E6 /* Pods_HappyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44C072295BFE99150959C6B /* Pods-HappyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyApp.debug.xcconfig"; path = "Target Support Files/Pods-HappyApp/Pods-HappyApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B7891331FF4FDEB0025F3CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C0E3A13E07DA5D73B42D7F1 /* Pods_HappyApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		187C356427306112007EECA1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				187C356827306165007EECA1 /* HappyPageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		187C35672730613B007EECA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				187C356A2730665B007EECA1 /* TableViewCells */,
+				8AD58ED6203801B2003ABFC6 /* CollectionViewCell */,
+				2B78913B1FF4FDEB0025F3CB /* HappyPageViewController.swift */,
+				2B7891691FF500300025F3CB /* CategoryDataSource.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187C356A2730665B007EECA1 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				187C356B2730669E007EECA1 /* CellHeaders */,
+				8AD58EDB203801B2003ABFC6 /* CustomTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		187C356B2730669E007EECA1 /* CellHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				8AD58EE22038668F003ABFC6 /* CellHeaderView.swift */,
+			);
+			path = CellHeaders;
+			sourceTree = "<group>";
+		};
+		187C356C273067E6007EECA1 /* HappyPage */ = {
+			isa = PBXGroup;
+			children = (
+				187C35672730613B007EECA1 /* View */,
+				187C356427306112007EECA1 /* ViewModel */,
+				187C356D27306838007EECA1 /* HappyPageModule.swift */,
+			);
+			path = HappyPage;
+			sourceTree = "<group>";
+		};
+		187C3573273089AC007EECA1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				187C35712730896E007EECA1 /* String+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		187C3574273089F4007EECA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B7891401FF4FDEB0025F3CB /* Assets.xcassets */,
+				2B7891421FF4FDEB0025F3CB /* LaunchScreen.storyboard */,
+				2B7891451FF4FDEB0025F3CB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B78912D1FF4FDEB0025F3CB = {
+			isa = PBXGroup;
+			children = (
+				2B7891381FF4FDEB0025F3CB /* HappyApp */,
+				2B7891371FF4FDEB0025F3CB /* Products */,
+				94B45C86B68F6055CA16188B /* Pods */,
+				8E65F73F231CF96417A3F14B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B7891371FF4FDEB0025F3CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B7891361FF4FDEB0025F3CB /* HappyApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B7891381FF4FDEB0025F3CB /* HappyApp */ = {
+			isa = PBXGroup;
+			children = (
+				187C3574273089F4007EECA1 /* Resources */,
+				187C3573273089AC007EECA1 /* Helpers */,
+				187C356C273067E6007EECA1 /* HappyPage */,
+				187C355D272F203D007EECA1 /* SceneDelegate.swift */,
+				187C356F27306F38007EECA1 /* AppDelegate.swift */,
+			);
+			path = HappyApp;
+			sourceTree = "<group>";
+		};
+		8AD58ED6203801B2003ABFC6 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8AD58ED7203801B2003ABFC6 /* CollectionItemViewCell.swift */,
+				187C3562272F38C0007EECA1 /* CollectionCellExtendedView.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		8E65F73F231CF96417A3F14B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C984921E617E944FFB57D4E6 /* Pods_HappyApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94B45C86B68F6055CA16188B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D44C072295BFE99150959C6B /* Pods-HappyApp.debug.xcconfig */,
+				94C69024C8723B730F69C88A /* Pods-HappyApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B7891351FF4FDEB0025F3CB /* HappyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B78915E1FF4FDEB0025F3CB /* Build configuration list for PBXNativeTarget "HappyApp" */;
+			buildPhases = (
+				FD74AE1B8BDC4E854317C0D4 /* [CP] Check Pods Manifest.lock */,
+				2B7891321FF4FDEB0025F3CB /* Sources */,
+				2B7891331FF4FDEB0025F3CB /* Frameworks */,
+				2B7891341FF4FDEB0025F3CB /* Resources */,
+				260CDE39F77C74E1BAF0B486 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyApp;
+			productName = DemoProject;
+			productReference = 2B7891361FF4FDEB0025F3CB /* HappyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B78912E1FF4FDEB0025F3CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 1300;
+				ORGANIZATIONNAME = shankar.bs;
+				TargetAttributes = {
+					2B7891351FF4FDEB0025F3CB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2B7891311FF4FDEB0025F3CB /* Build configuration list for PBXProject "HappyApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B78912D1FF4FDEB0025F3CB;
+			productRefGroup = 2B7891371FF4FDEB0025F3CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B7891351FF4FDEB0025F3CB /* HappyApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B7891341FF4FDEB0025F3CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B7891441FF4FDEB0025F3CB /* LaunchScreen.storyboard in Resources */,
+				2B7891411FF4FDEB0025F3CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		260CDE39F77C74E1BAF0B486 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HappyApp/Pods-HappyApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HappyApp/Pods-HappyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD74AE1B8BDC4E854317C0D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B7891321FF4FDEB0025F3CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B78913C1FF4FDEB0025F3CB /* HappyPageViewController.swift in Sources */,
+				187C35722730896E007EECA1 /* String+Extensions.swift in Sources */,
+				187C355E272F203D007EECA1 /* SceneDelegate.swift in Sources */,
+				187C356927306165007EECA1 /* HappyPageViewModel.swift in Sources */,
+				187C356E27306838007EECA1 /* HappyPageModule.swift in Sources */,
+				8AD58EDF203801B2003ABFC6 /* CustomTableViewCell.swift in Sources */,
+				2B78916A1FF500300025F3CB /* CategoryDataSource.swift in Sources */,
+				8AD58EE32038668F003ABFC6 /* CellHeaderView.swift in Sources */,
+				187C3563272F38C0007EECA1 /* CollectionCellExtendedView.swift in Sources */,
+				187C357027306F38007EECA1 /* AppDelegate.swift in Sources */,
+				8AD58EDC203801B2003ABFC6 /* CollectionItemViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B7891421FF4FDEB0025F3CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B7891431FF4FDEB0025F3CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B78915C1FF4FDEB0025F3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B78915D1FF4FDEB0025F3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B78915F1FF4FDEB0025F3CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44C072295BFE99150959C6B /* Pods-HappyApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HappyApp/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.valniko.HappyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B7891601FF4FDEB0025F3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94C69024C8723B730F69C88A /* Pods-HappyApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HappyApp/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.valniko.HappyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B7891311FF4FDEB0025F3CB /* Build configuration list for PBXProject "HappyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B78915C1FF4FDEB0025F3CB /* Debug */,
+				2B78915D1FF4FDEB0025F3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B78915E1FF4FDEB0025F3CB /* Build configuration list for PBXNativeTarget "HappyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B78915F1FF4FDEB0025F3CB /* Debug */,
+				2B7891601FF4FDEB0025F3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B78912E1FF4FDEB0025F3CB /* Project object */;
+}
