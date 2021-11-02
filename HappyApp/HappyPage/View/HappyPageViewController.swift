@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 
 final class HappyPageViewController: UIViewController {
-    private let tableView = UITableView()
+    private let tableView = UITableView(frame: .zero, style: .grouped)
     private let viewModel: HappyPageViewModel
     private var categories = [CategoryDataSource]()
     private let disposeBag = DisposeBag()
