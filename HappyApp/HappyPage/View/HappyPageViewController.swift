@@ -7,6 +7,7 @@ final class HappyPageViewController: UIViewController {
     private let viewModel: HappyPageViewModel
     private let bag = DisposeBag()
     private var categories = [CategoryDataSource]()
+    private var alert = UIAlertController()
 
     init(viewModel: HappyPageViewModel) {
         self.viewModel = viewModel
@@ -29,7 +30,6 @@ final class HappyPageViewController: UIViewController {
 }
 
 extension HappyPageViewController: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
@@ -41,10 +41,6 @@ extension HappyPageViewController: UITableViewDelegate {
 }
 
 private extension HappyPageViewController {
-    @objc func seeAllTapped() {
-        viewModel.makeStubCall()
-    }
-
     func setupTable() {
         prepareTable()
 
@@ -52,13 +48,13 @@ private extension HappyPageViewController {
             var baseCell: BaseTableViewCell?
             var collectionCellsize: CGSize
             switch row {
-                case 0:
+            case 0:
                 baseCell = tableViewLocal.dequeueReusableCell(withIdentifier: "customTableViewCellId") as? CustomTableViewCell
                 collectionCellsize = .init(width: 158, height: 158)
-                case 1:
+            case 1:
                 baseCell = tableViewLocal.dequeueReusableCell(withIdentifier: "baseTableViewCellId") as? BaseTableViewCell
                 collectionCellsize = .init(width: 365, height: 180)
-                default:
+            default:
                 baseCell = tableViewLocal.dequeueReusableCell(withIdentifier: "extendedTableViewCellId") as? ExtendedTableViewCell
                 collectionCellsize = .init(width: 328, height: 234)
             }
@@ -90,13 +86,15 @@ private extension HappyPageViewController {
     }
 
     func showAlert(description: String) {
-        let alert = UIAlertController(title: "Error", message: description, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
-        present(alert, animated: true)
+        if !alert.isBeingPresented {
+            alert = UIAlertController(title: "Error", message: description, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: nil))
+            present(alert, animated: true)
+        }
     }
 
     //MARK: data flow we are receiving here
-    private func bind() {
+    func bind() {
         viewModel
             .happyPageViewBinder
             .observe(on: MainScheduler.asyncInstance)
@@ -115,7 +113,7 @@ private extension HappyPageViewController {
             .disposed(by: bag)
     }
 
-    private func bind(cell: BaseTableViewCell) {
+    func bind(cell: BaseTableViewCell) {
         cell.viewTapBinder
             .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak viewModel] _ in
