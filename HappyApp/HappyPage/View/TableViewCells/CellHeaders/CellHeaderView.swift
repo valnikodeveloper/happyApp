@@ -12,6 +12,8 @@ final class CellHeaderView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.medium)
         label.textColor = UIColor(named: "HappyPurple")
+        label.text = "See all"
+        label.isUserInteractionEnabled = true
         return label
     }()
 
@@ -24,8 +26,9 @@ final class CellHeaderView: UIView {
         backgroundColor = .white
 
         titleLeft.snp.makeConstraints {
-            $0.bottom.top.equalToSuperview()
+            $0.top.equalToSuperview()
             $0.left.equalToSuperview().inset(20)
+            $0.bottom.equalToSuperview().inset(5)
         }
 
         titleRight.snp.makeConstraints {

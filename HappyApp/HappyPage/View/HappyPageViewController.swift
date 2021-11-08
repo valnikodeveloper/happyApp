@@ -1,11 +1,12 @@
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class HappyPageViewController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
     private let viewModel: HappyPageViewModel
+    private let bag = DisposeBag()
     private var categories = [CategoryDataSource]()
-    private let disposeBag = DisposeBag()
 
     init(viewModel: HappyPageViewModel) {
         self.viewModel = viewModel
@@ -20,64 +21,22 @@ final class HappyPageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
 
-        setupTable()
         bind()
+        setupTable()
 
         viewModel.readyToRecieve()
     }
 }
 
-extension HappyPageViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        categories.count
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
+extension HappyPageViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        var height: CGFloat = .zero
-        if categories.count > indexPath.section {
-            height = categories[indexPath.section].size?.height ?? 0
+        switch indexPath.row {
+        case 0:
+            return 204
+        default:
+            return 280
         }
-        return height
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell") as? CustomTableViewCell else {
-            fatalError("fatalError: couldn't dequeueReusableCell CustomTableViewCell")
-        }
-        let aCategory = categories[indexPath.section]
-
-        cell.updateTableCell(with: aCategory)
-        cell.cellDelegate = self
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        section == 1 ? 0 : 30
-    }
-
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = CellHeaderView()
-        let aCategory = self.categories[section]
-        headerView.titleLeft.text = aCategory.name
-        headerView.titleRight.isHidden = aCategory.name == nil
-
-        headerView.titleRight.text = "See all"
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(seeAllTapped))
-        headerView.addGestureRecognizer(gesture)
-        return headerView
-    }
-}
-
-extension HappyPageViewController: CustomCollectionCellDelegate {
-    func collectionView(collectionCell collectioncell:
-                        CollectionItemViewCell?,
-                        didTap tableCell: CustomTableViewCell) {
-
-        viewModel.makeStubCall()
     }
 }
 
@@ -87,18 +46,47 @@ private extension HappyPageViewController {
     }
 
     func setupTable() {
+        prepareTable()
+
+        viewModel.categories.bind(to: tableView.rx.items) { [weak self] tableViewLocal, row, item -> UITableViewCell in
+            var baseCell: BaseTableViewCell?
+            var collectionCellsize: CGSize
+            switch row {
+                case 0:
+                baseCell = tableViewLocal.dequeueReusableCell(withIdentifier: "customTableViewCellId") as? CustomTableViewCell
+                collectionCellsize = .init(width: 158, height: 158)
+                case 1:
+                baseCell = tableViewLocal.dequeueReusableCell(withIdentifier: "baseTableViewCellId") as? BaseTableViewCell
+                collectionCellsize = .init(width: 365, height: 180)
+                default:
+                baseCell = tableViewLocal.dequeueReusableCell(withIdentifier: "extendedTableViewCellId") as? ExtendedTableViewCell
+                collectionCellsize = .init(width: 328, height: 234)
+            }
+            guard let cell = baseCell else {
+                fatalError("baseTableViewCellId")
+            }
+            cell.setupTableCell(with: item, and: collectionCellsize)
+            self?.bind(cell: cell)
+
+            return cell
+        }.disposed(by: bag)
+    }
+
+    func prepareTable() {
         view.backgroundColor = .white
         tableView.backgroundColor = .white
         tableView.separatorColor = .clear
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "customTableViewCell")
+        tableView.rx.setDelegate(self).disposed(by: bag)
+
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "customTableViewCellId")
+        tableView.register(BaseTableViewCell.self, forCellReuseIdentifier: "baseTableViewCellId")
+        tableView.register(ExtendedTableViewCell.self, forCellReuseIdentifier: "extendedTableViewCellId")
+
         view.addSubview(tableView)
 
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-
-        tableView.dataSource = self
-        tableView.delegate = self
     }
 
     func showAlert(description: String) {
@@ -111,17 +99,28 @@ private extension HappyPageViewController {
     private func bind() {
         viewModel
             .happyPageViewBinder
+            .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] in
                 self?.categories = $0
                 self?.tableView.reloadData()
             })
-            .disposed(by: disposeBag)
+            .disposed(by: bag)
 
         viewModel
             .happyPageErrorBinder
+            .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] in
                 self?.showAlert(description: $0)
             })
-            .disposed(by: disposeBag)
+            .disposed(by: bag)
+    }
+
+    private func bind(cell: BaseTableViewCell) {
+        cell.viewTapBinder
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak viewModel] _ in
+                viewModel?.makeStubCall()
+            })
+            .disposed(by: bag)
     }
 }

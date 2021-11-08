@@ -9,40 +9,32 @@ final class CollectionCellExtendedView: CollectionItemViewCell {
         return label
     }()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func setupChildViews() {
         contentView.addSubview(subTitle)
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func preparePlaceholder() {
-        placeHolderLabel.snp.remakeConstraints {
-            $0.left.right.equalToSuperview()
-            $0.top.equalToSuperview().offset(20)
-            $0.height.equalTo(170)
+    override func alignPlaceholder() {
+        cellImageView.snp.remakeConstraints {
+            $0.left.right.top.equalToSuperview()
+            let spaceExceptImage = 64 as CGFloat
+            $0.height.equalTo(frame.height - spaceExceptImage)
         }
 
         subTitle.snp.remakeConstraints {
             $0.left.right.equalToSuperview()
-            $0.top.equalTo(placeHolderLabel.snp.bottom).offset(12)
+            $0.top.equalTo(cellImageView.snp.bottom).offset(12)
+            $0.bottom.lessThanOrEqualToSuperview()
         }
     }
 
     override func alignViews() {
         cellImageView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(20)
-            $0.left.right.equalToSuperview()
-            $0.height.equalTo(170)
+            $0.left.right.top.equalToSuperview()
             $0.bottom.equalTo(subTitle.snp.top).inset(-12)
         }
 
-        let height = subTitle.text?.calculatedHeight(with: 316, and: subTitle.font) ?? 0
         subTitle.snp.makeConstraints {
-            $0.left.right.equalToSuperview()
-            $0.height.equalTo(height)
+            $0.left.right.bottom.equalToSuperview()
         }
     }
 

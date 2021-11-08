@@ -8,12 +8,10 @@ struct CategoryItem {
 struct CategoryDataSource {
     let name: String?
     var categoryItems: [CategoryItem]
-    let size: CGSize?
 
     init(with info: [String: Any]) {
         name = info[DataSourceConstants.categoryName] as? String
         categoryItems = info[DataSourceConstants.categoryItems] as? [CategoryItem] ?? []
-        size = info[DataSourceConstants.itemSize] as? CGSize
     }
 }
 

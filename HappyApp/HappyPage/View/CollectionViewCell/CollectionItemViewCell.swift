@@ -1,10 +1,6 @@
 import UIKit
 import SnapKit
 
-protocol CustomCollectionCellDelegate: AnyObject {
-    func collectionView(collectionCell: CollectionItemViewCell?, didTap tableCell: CustomTableViewCell)
-}
-
 class CollectionItemViewCell: UICollectionViewCell {
     let cellImageView = UIImageView()
     let placeHolderLabel = UILabel()
@@ -13,6 +9,7 @@ class CollectionItemViewCell: UICollectionViewCell {
         super.init(frame: frame)
 
         setupMainView()
+        setupChildViews()
         setupPlaceholder()
         cellImageView.layer.cornerRadius = 16
     }
@@ -30,24 +27,25 @@ class CollectionItemViewCell: UICollectionViewCell {
         alignViews()
 
         guard let _ = cellImageView.image else {
-            preparePlaceholder()
+            placeHolderLabel.isHidden = false
+            alignPlaceholder()
             return
         }
-
-        placeHolderLabel.removeFromSuperview()
     }
 
-    func preparePlaceholder() {
-        
+    func alignPlaceholder() {
+        // method for override
+    }
+
+    func setupChildViews() {
+        // method for override
     }
 
     func alignViews() {
         cellImageView.snp.makeConstraints {
-            $0.left.right.equalToSuperview()
-            $0.bottom.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
     }
-    
 }
 
 private extension CollectionItemViewCell {
@@ -56,9 +54,9 @@ private extension CollectionItemViewCell {
         cellImageView.contentMode = .scaleAspectFill
         cellImageView.layer.cornerRadius = 16
     }
-    
+
     func setupPlaceholder() {
-        contentView.addSubview(placeHolderLabel)
+        cellImageView.addSubview(placeHolderLabel)
         placeHolderLabel.layer.cornerRadius = 16
         placeHolderLabel.clipsToBounds = true
 
@@ -66,10 +64,10 @@ private extension CollectionItemViewCell {
         placeHolderLabel.numberOfLines = .zero
         placeHolderLabel.textAlignment = .center
         placeHolderLabel.backgroundColor = .orange
+        placeHolderLabel.isHidden = true
 
         placeHolderLabel.snp.makeConstraints {
-            $0.left.right.bottom.equalToSuperview()
-            $0.top.equalToSuperview().inset(20)
+            $0.edges.equalToSuperview()
         }
     }
 }

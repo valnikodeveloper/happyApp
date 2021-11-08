@@ -13,13 +13,15 @@
 		187C356927306165007EECA1 /* HappyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C356827306165007EECA1 /* HappyPageViewModel.swift */; };
 		187C356E27306838007EECA1 /* HappyPageModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C356D27306838007EECA1 /* HappyPageModule.swift */; };
 		187C357027306F38007EECA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C356F27306F38007EECA1 /* AppDelegate.swift */; };
-		187C35722730896E007EECA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C35712730896E007EECA1 /* String+Extensions.swift */; };
+		18AB9B442737D47700454CB3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB9B432737D47700454CB3 /* CustomTableViewCell.swift */; };
+		18AB9B462737FCEF00454CB3 /* CollectionCellUsualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB9B452737FCEF00454CB3 /* CollectionCellUsualView.swift */; };
+		18AB9B4827382D1700454CB3 /* ExtendedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB9B4727382D1700454CB3 /* ExtendedTableViewCell.swift */; };
 		2B78913C1FF4FDEB0025F3CB /* HappyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B78913B1FF4FDEB0025F3CB /* HappyPageViewController.swift */; };
 		2B7891411FF4FDEB0025F3CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7891401FF4FDEB0025F3CB /* Assets.xcassets */; };
 		2B7891441FF4FDEB0025F3CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7891421FF4FDEB0025F3CB /* LaunchScreen.storyboard */; };
 		2B78916A1FF500300025F3CB /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7891691FF500300025F3CB /* CategoryDataSource.swift */; };
 		8AD58EDC203801B2003ABFC6 /* CollectionItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD58ED7203801B2003ABFC6 /* CollectionItemViewCell.swift */; };
-		8AD58EDF203801B2003ABFC6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD58EDB203801B2003ABFC6 /* CustomTableViewCell.swift */; };
+		8AD58EDF203801B2003ABFC6 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD58EDB203801B2003ABFC6 /* BaseTableViewCell.swift */; };
 		8AD58EE32038668F003ABFC6 /* CellHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD58EE22038668F003ABFC6 /* CellHeaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +31,9 @@
 		187C356827306165007EECA1 /* HappyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPageViewModel.swift; sourceTree = "<group>"; };
 		187C356D27306838007EECA1 /* HappyPageModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPageModule.swift; sourceTree = "<group>"; };
 		187C356F27306F38007EECA1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		187C35712730896E007EECA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		18AB9B432737D47700454CB3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		18AB9B452737FCEF00454CB3 /* CollectionCellUsualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellUsualView.swift; sourceTree = "<group>"; };
+		18AB9B4727382D1700454CB3 /* ExtendedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedTableViewCell.swift; sourceTree = "<group>"; };
 		2B7891361FF4FDEB0025F3CB /* HappyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B78913B1FF4FDEB0025F3CB /* HappyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyPageViewController.swift; sourceTree = "<group>"; };
 		2B7891401FF4FDEB0025F3CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,7 +41,7 @@
 		2B7891451FF4FDEB0025F3CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B7891691FF500300025F3CB /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
 		8AD58ED7203801B2003ABFC6 /* CollectionItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItemViewCell.swift; sourceTree = "<group>"; };
-		8AD58EDB203801B2003ABFC6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8AD58EDB203801B2003ABFC6 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		8AD58EE22038668F003ABFC6 /* CellHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderView.swift; sourceTree = "<group>"; };
 		94C69024C8723B730F69C88A /* Pods-HappyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyApp.release.xcconfig"; path = "Target Support Files/Pods-HappyApp/Pods-HappyApp.release.xcconfig"; sourceTree = "<group>"; };
 		C984921E617E944FFB57D4E6 /* Pods_HappyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				187C356B2730669E007EECA1 /* CellHeaders */,
-				8AD58EDB203801B2003ABFC6 /* CustomTableViewCell.swift */,
+				18AB9B432737D47700454CB3 /* CustomTableViewCell.swift */,
+				18AB9B4727382D1700454CB3 /* ExtendedTableViewCell.swift */,
+				8AD58EDB203801B2003ABFC6 /* BaseTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -100,14 +106,6 @@
 				187C356D27306838007EECA1 /* HappyPageModule.swift */,
 			);
 			path = HappyPage;
-			sourceTree = "<group>";
-		};
-		187C3573273089AC007EECA1 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				187C35712730896E007EECA1 /* String+Extensions.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		187C3574273089F4007EECA1 /* Resources */ = {
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				187C3574273089F4007EECA1 /* Resources */,
-				187C3573273089AC007EECA1 /* Helpers */,
 				187C356C273067E6007EECA1 /* HappyPage */,
 				187C355D272F203D007EECA1 /* SceneDelegate.swift */,
 				187C356F27306F38007EECA1 /* AppDelegate.swift */,
@@ -154,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				8AD58ED7203801B2003ABFC6 /* CollectionItemViewCell.swift */,
+				18AB9B452737FCEF00454CB3 /* CollectionCellUsualView.swift */,
 				187C3562272F38C0007EECA1 /* CollectionCellExtendedView.swift */,
 			);
 			path = CollectionViewCell;
@@ -299,11 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B78913C1FF4FDEB0025F3CB /* HappyPageViewController.swift in Sources */,
-				187C35722730896E007EECA1 /* String+Extensions.swift in Sources */,
 				187C355E272F203D007EECA1 /* SceneDelegate.swift in Sources */,
 				187C356927306165007EECA1 /* HappyPageViewModel.swift in Sources */,
+				18AB9B442737D47700454CB3 /* CustomTableViewCell.swift in Sources */,
 				187C356E27306838007EECA1 /* HappyPageModule.swift in Sources */,
-				8AD58EDF203801B2003ABFC6 /* CustomTableViewCell.swift in Sources */,
+				18AB9B4827382D1700454CB3 /* ExtendedTableViewCell.swift in Sources */,
+				18AB9B462737FCEF00454CB3 /* CollectionCellUsualView.swift in Sources */,
+				8AD58EDF203801B2003ABFC6 /* BaseTableViewCell.swift in Sources */,
 				2B78916A1FF500300025F3CB /* CategoryDataSource.swift in Sources */,
 				8AD58EE32038668F003ABFC6 /* CellHeaderView.swift in Sources */,
 				187C3563272F38C0007EECA1 /* CollectionCellExtendedView.swift in Sources */,
