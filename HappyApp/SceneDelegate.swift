@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  AirHorizon
-//
-//  Created by Valeriy on 21.09.2020.
-//  Copyright © 2020 vanikol. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
